@@ -1,0 +1,176 @@
+*{
+  box-sizing: border-box;
+}
+
+header { 
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #FFF;
+}
+
+.cont1{
+    background-color: rgb(199, 71, 71);
+}
+
+
+.cont2{
+    background-color: rgb(40, 29, 197);
+   
+  }
+
+  .box{
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    width: 50%;
+    height: 127px;
+
+  }
+
+  .quadrado {
+    width: 16px;
+    height: 16px;
+    background-color: #0050ff;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .barra{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .nome span p {
+    font-size: 1.563rem;
+    font-weight: bold;
+  }
+
+  .profissao span p{
+    font-size: 1.063rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    
+   
+  }
+
+  .box2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 127px;
+   
+  }
+
+  .box2 ul{
+    display: flex;
+    
+  }
+
+  .box2 li{
+    margin-left: 1rem;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+
+    
+  }
+
+  .box2 ul li .active {
+    color: #0050ff;
+  }
+
+  .box2 li .lista{
+    text-decoration: none;
+    color: black;
+  }
+
+  .box2 li .lista:hover{
+    color: #0050ff;
+  }
+
+  .box2 li .lista:active{
+    color: #0050ff;
+  }
+
+
+  /* css do menu */
+
+  .hamburguer{
+    cursor: pointer;
+    display: none;
+    
+   }
+   
+   .bar{
+     background-color: dodgerblue;
+     width: 26px;
+     height: 3px;
+     margin: 5px auto;
+     display: block;
+     border-radius: 5px;
+     -webkit-transition: all 0.3s ease-in-out;
+     transition: all 0.3s ease-in-out;
+   }
+   
+   .hamburguer .bar:nth-child(1){
+     width: 13px;
+     position: relative;
+     left:-6px;
+   }
+   
+   .hamburguer .bar:nth-child(3){
+     width: 13px;
+     position: relative;
+     left:6px;
+   }
+   
+   
+   @media(max-width: 912px){
+   
+     .hamburguer{
+       display: block;
+       position: relative;
+       left: 7rem;
+     }
+   
+     .hamburguer.active .bar:nth-child(1) {
+      
+       transform: translateY(8px) rotate(45deg);
+       width: 26px;
+       left: 0;
+     
+     }
+     
+     .hamburguer.active .bar:nth-child(2) {
+       opacity: 0;
+       
+     }
+   
+     .hamburguer.active .bar:nth-child(3) {
+       transform: translateY(-8px) rotate(-45deg);
+       width: 26px;
+       left: 0;
+     }
+
+     .box2 ul{
+      display: none;
+     }
+
+     header{
+      display: flex ;
+      justify-content: space-between;
+      padding: 0.5rem;
+     }
+
+     .header.menu-open {
+      display: flex;
+      flex-direction: column;
+    }
+
+    }
+
+   
